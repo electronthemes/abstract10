@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{@site.locale}}">
+
+<head>
+
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>{{ meta_title }}</title>
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="{{ asset 'assets/css/base.css' }}">
+    <link rel="stylesheet" href="{{ asset 'assets/css/vendor.css' }}">
+    <link rel="stylesheet" href="{{ asset 'assets/css/main.css' }}">
+
+
+    <!-- script
+   ================================================== -->
+    <script src="{{ asset 'assets/js/modernizr.js' }}"></script>
+    <script src="{{ asset 'assets/js/pace.min.js' }}"></script>
+
+    <!-- favicons
+	================================================== -->
+    {{ ghost_head }}
+</head>
+
+<body id="top" class="{{body_class}}">
+    {{> "theme-header"}}
+    {{{ body }}}
+    {{> "theme-footer"}}
+    <script>
+        var serachContentApi = "{{@site.url}}/ghost/api/v4/content/posts/?key="+ window.contentApiKey +"&limit=all&fields=id,title,excerpt,feature_image,custom_excerpt,url,published_at&formats=plaintext&include=authors";
+
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+
+        var homeUrl = '{{ @site.url }}';
+    </script>
+
+    <!-- Java Script
+   ================================================== -->
+    <script src="{{ asset 'assets/js/jquery-2.1.3.min.js' }}"></script>
+    <script src="{{ asset 'assets/js/plugins.js' }}"></script>
+    <script src="{{ asset 'assets/js/medium-zoom.min.js' }}"></script>
+    <script src="{{ asset 'assets/js/jquery.fitvids.js' }}"></script>
+    <script src="{{ asset 'assets/js/jquery.appear.js' }}"></script>
+    <script src="{{ asset 'assets/js/fuse.min.js' }}"></script>
+    <script src="{{ asset 'assets/js/main.js' }}"></script>
+    {{ ghost_foot }}
+
+    {{{block "theme-footer"}}}
+</body>
+</html>

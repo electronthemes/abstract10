@@ -1,0 +1,26 @@
+{{#primary_author}}
+
+<div class="author-profile">
+    {{#if profile_image}}
+        <img src="{{ profile_image }}" alt="{{ name }}">
+    {{/if}}
+    <div class="about">
+        <h4><a href="{{ url }}">{{ name }}</a></h4>
+        <p>{{ bio }}</p>
+        <ul class="author-social">
+            {{#if facebook}}
+                <li><a href="{{ facebook }}">{{t "Facebook"}}</a></li>
+            {{/if}}
+            {{#if twitter}}
+                <li><a href="{{ twitter }}">{{t "Twitter"}}</a></li>
+            {{/if}}
+            {{#if website}}
+                <li><a href="{{ website }}">{{ website }}</a></li>
+            {{/if}}
+            {{#if location}}
+                <li> {{t "Location:"}} {{ location }} </li>
+            {{/if}}
+        </ul>
+    </div>
+</div>
+{{/primary_author}}

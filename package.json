@@ -1,0 +1,60 @@
+{
+    "name": "abstract",
+    "description": "This is a cool and minimal ghost theme for blogging !!! 🚀",
+    "version": "2.2.0",
+    "engines": {
+        "ghost": ">=4.0.0",
+        "ghost-api": "v4"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "electronthemes",
+        "email": "electronthemes@gmail.com",
+        "url": "https://electronthemes.com"
+    },
+    "keywords": [
+        "blogging",
+        "ghost",
+        "electronthemes",
+        "ghost cms",
+        "ghost-theme",
+        "free ghost theme",
+        "ghost theme",
+        "abstract ghost theme",
+        "ghost blogging theme"
+    ],
+    "config": {
+        "posts_per_page": 10,
+        "card_assets": true,
+        "custom": {
+            "site_footer": {
+                "type": "text",
+                "default": "bounty. All copyright reserved by Electronthemes & Published with Ghost."
+            },
+            "about_site_footer": {
+                "type": "text",
+                "default": "ElectronThemes designs each theme from the end users perspective. We arrange the information as your visitors expect to find. Our designs have a proven track record of getting more conversion compared to any other provider!"
+            },
+            "show_featured_posts": {
+                "type": "boolean",
+                "default": true,
+                "group": "homepage"
+            },
+            "show_author": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
+            "show_navigation-section": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            },
+            "show_comment-box": {
+                "type": "boolean",
+                "default": true,
+                "group": "post"
+            }
+        }
+    }
+}

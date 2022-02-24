@@ -1,0 +1,26 @@
+{{#get 'posts' filter="featured:true" include="authors" as |post|}}
+    {{#if posts}}
+        <div class="brick entry featured-grid animate-this">
+            <div class="entry-content">
+                <div id="featured-post-slider" class="flexslider">
+                    <ul class="slides">
+                        {{#post}}
+                        <li>
+                            <div class="featured-post-slide">
+                                <div class="post-background {{^if feature_image}}no-feature_image{{/if}}" {{#if feature_image}}style="background-image:url('{{feature_image}}');"{{/if}}></div>
+                                <div class="overlay"></div>
+                                <div class="post-content">
+                                    <ul class="entry-meta">
+                                        <li>{{date published_at format="MMMM DD YYYY"}}</li>
+                                    </ul>
+                                    <h1 class="slide-title"><a href="{{url}}" title="">{{title}}</a></h1>
+                                </div>
+                            </div>
+                        </li> <!-- /slide -->
+                        {{/post}}
+                    </ul> <!-- end slides -->
+                </div> <!-- end featured-post-slider -->
+            </div> <!-- end entry content -->
+        </div>
+    {{/if}}
+{{/get}}

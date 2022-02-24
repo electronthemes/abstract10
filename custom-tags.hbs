@@ -1,0 +1,17 @@
+{{!< default }}
+
+<!-- masonry
+================================================== -->
+<section id="bricks">
+    <div class="row masonry">
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+            <div class="grid-sizer"></div>
+            {{#get 'tags' include="count.posts" as |tag|}} 
+            {{#tag}}
+               {{> "tag-card" }}
+            {{/tag}}
+            {{/get}}
+        </div> <!-- end brick-wrapper -->
+    </div> <!-- end row -->
+</section> <!-- end bricks -->

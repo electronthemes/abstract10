@@ -1,0 +1,66 @@
+{{!< default }}
+
+{{#post}}
+<!-- content
+================================================== -->
+<section id="content-wrap" class="blog-single">
+	<div class="row">
+		<div class="col-twelve">
+			<article class="format-standard">
+				{{#if feature_image}}
+					<div class="content-media">
+						<div class="post-thumb">
+							<img src="{{ feature_image }}">
+						</div>
+					</div>
+				{{/if}}
+				<div class="primary-content blog-full-content">
+					<h1 class="page-title">{{ title }}</h1>
+					<ul class="entry-meta">
+						<li class="date">
+							{{ date format="DD MMMM YYYY" }}
+						</li>
+						<li class="cat">
+							{{tags}}
+						</li>
+					</ul>
+					{{content}}
+					<p class="tags">
+						<span>{{t "Tagged in :"}}</span>
+						{{ tags }}
+					</p>
+					{{#if @custom.show_author}}
+					{{> "author-info" }}
+					{{/if}}
+				</div> <!-- end entry-primary -->
+				{{#if @custom.show_navigation-section}}
+				{{> "next-previous"}}
+				{{/if}}
+			</article>
+		</div> <!-- end col-twelve -->
+	</div> <!-- end row -->
+
+	{{#if @custom.show_comment-box}}
+	<div class="comments-wrap">
+		<div  style="width: 850px; margin: auto;" id="disqus_thread"></div>
+	</div> <!-- end comments-wrap -->
+	{{/if}}
+</section> <!-- end content -->
+{{/post}}
+
+
+{{#contentFor "theme-footer"}}
+<script>
+	var disqus_config = function () {
+		this.page.url = '{{url absolute=true}}';
+		this.page.identifier = '{{comment_id}}';
+	};
+	(function () { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = 'https://abstract10-theme.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{{/contentFor}}

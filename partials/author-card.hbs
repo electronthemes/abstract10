@@ -1,0 +1,29 @@
+<article class="brick entry format-standard animate-this {{^if cover_image}}no-cover-image{{/if}}">
+    {{#if cover_image}}
+        <div class="entry-thumb">
+            <a href="{{ url }}" class="thumb-link">
+                <img src="{{ cover_image }}" alt="{{name}}">
+            </a>
+        </div>
+    {{/if}}
+    <div class="entry-text">
+        <div class="entry-header profile-content">
+            {{#if profile_image}}
+            <div class="author-profile-image">
+                <img src="{{profile_image}}" alt="{{name}}">
+            </div>
+            {{/if}}
+            <div class="entry-meta">
+                <span class="cat-links">
+                     {{plural count.posts empty="0 article" singular="1 article" plural="% articles"}}
+                </span>
+            </div>
+            <h1 class="entry-title"><a href="{{ url }}">{{ name }}</a></h1>
+        </div>
+        {{#if bio}}
+            <div class="entry-excerpt">
+                {{bio}}
+            </div>
+        {{/if}}
+    </div>
+</article> <!-- end article -->

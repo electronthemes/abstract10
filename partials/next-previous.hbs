@@ -1,0 +1,18 @@
+<div class="pagenav group">
+    {{#prev_post}}
+    <div class="prev-nav">
+        <a href="{{ url }}" rel="prev">
+            <span>{{t "Previous"}}</span>
+            {{ title }}
+        </a>
+    </div>
+    {{/prev_post}}
+    {{#next_post}}
+    <div class="next-nav">
+        <a href="{{ url }}" rel="next">
+            <span>{{t "Next"}}</span>
+            {{ title }}
+        </a>
+    </div>
+    {{/next_post}}
+</div>

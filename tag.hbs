@@ -1,0 +1,32 @@
+{{!< default }}
+
+{{#tag}}
+<!-- page header
+================================================== -->
+<section id="page-header">
+	<div class="row current-cat">
+		<div class="col-full">
+			<h1># {{ name }}</h1>
+			{{#if description}}
+				<p>{{ description }}</p>
+			{{/if}}
+		</div>          
+	</div>
+</section>
+{{/tag}}
+   
+<!-- masonry
+================================================== -->
+<section id="bricks" class="with-top-sep">
+	<div class="row masonry">
+		<div class="bricks-wrapper">
+			<div class="grid-sizer"></div>
+			{{#foreach posts}}
+				{{> "post-card"}}
+			{{/foreach}}
+		</div> 
+	</div>
+	<div class="row">
+		{{pagination}}
+	</div>
+</section>

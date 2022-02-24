@@ -1,0 +1,46 @@
+<!-- header 
+================================================== -->
+<header class="short-header" id="theme-header">
+    <div class="gradient-block"></div>
+    <div class="row header-content">
+        <div class="logo">
+            <a href="{{ @site.url }}">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{ @site.title }}">
+                {{else}}
+                    <h3>{{ @site.title }}</h3>
+                {{/if}}
+            </a>
+        </div>
+        <nav id="main-nav-wrap">
+            {{navigation}}
+        </nav>
+        <div class="triggers">
+            <a class="search-trigger" href="#"><i class="fa fa-search"></i></a>
+            <a class="menu-toggle" href="#"><span>{{t "Menu"}}</span></a>
+        </div> <!-- end triggers -->
+    </div>
+    <div id="content-wrap" class="search-wrap"
+        id="search-wrap">
+        <div class="row">
+            <div class="search-content">
+                <div class="search-form">
+                    <label>
+                        <span class="hide-content">{{t "Search for:"}}</span>
+                        <input type="search" class="search-field" placeholder="Type Your Keywords"
+                            value="" name="s" title="Search for:" autocomplete="off" />
+                    </label>
+                </div>
+                <div class="results">
+                    <div class="resultCount"></div>
+                    <div class="no-result-found d-none">{{t "No result found"}}</div>
+                    <div class="result">
+                    </div>
+                </div>
+                <a href="#" id="close-search" class="close-btn">
+                    {{t "Close"}}
+                </a>
+            </div>
+        </div>
+    </div>
+</header> <!-- end header -->

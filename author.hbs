@@ -1,0 +1,48 @@
+{{!< default }}
+
+
+{{#author}}
+<!-- page header
+================================================== -->
+<section id="page-header">
+	<div class="row current-cat">
+		<div class="col-full">
+			<h1>{{ name }}</h1>
+			<ul class="author-social-profiles">
+				{{#if facebook}}
+				<li><a href="{{facebook_url}}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				{{/if}}
+				{{#if twitter}}
+				<li><a href="{{twitter_url}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				{{/if}}
+				{{#if website}}
+				<li><a href="{{website}}" target="_blank"><i class="fa fa-globe"></i></a></li>
+				{{/if}}
+			</ul>
+			{{#if location}}
+				<span>{{location}}</span>
+			{{/if}}
+			{{#if bio}}
+				<p>{{ bio }}</p>
+			{{/if}}
+		</div>          
+	</div>
+</section>
+{{/author}}
+   
+   
+<!-- masonry
+================================================== -->
+<section id="bricks" class="with-top-sep">
+	<div class="row masonry">
+		<div class="bricks-wrapper">
+			<div class="grid-sizer"></div>
+			{{#foreach posts}}
+				{{> "post-card"}}
+			{{/foreach}}
+		</div> 
+	</div>
+	<div class="row">
+		{{pagination}}
+	</div>
+</section>

@@ -1,0 +1,17 @@
+{{!< default }}
+
+<!-- masonry
+================================================== -->
+<section id="bricks">
+    <div class="row masonry">
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+            <div class="grid-sizer"></div>
+            {{#get 'authors' include="count.posts" as |user|}} 
+            {{#user}}
+               {{> "author-card" }}
+            {{/user}}
+            {{/get}}
+        </div> <!-- end brick-wrapper -->
+    </div> <!-- end row -->
+</section> <!-- end bricks -->

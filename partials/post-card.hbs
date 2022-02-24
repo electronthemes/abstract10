@@ -1,0 +1,29 @@
+<article class="brick entry format-standard animate-this">
+    {{#if feature_image}}
+        <div class="entry-thumb">
+            <a href="{{ url }}" class="thumb-link">
+                <img src="{{ feature_image }}" alt="{{title}}">
+            </a>
+        </div>
+    {{/if}}
+    <div class="entry-text">
+        <div class="entry-header">
+            <div class="entry-meta">
+                <span class="cat-links">
+                    {{#foreach tags}}
+                        <a href="{{ url }}">{{ name }}</a>
+                    {{/foreach}}
+                </span>
+                 {{#foreach authors}}
+                <span class="author-post">
+                    <a href="author/{{slug}}">{{name}}</a>
+                </span>
+                {{/foreach}}
+            </div>
+            <h1 class="entry-title"><a href="{{ url }}">{{ title }}</a></h1>
+        </div>
+        <div class="entry-excerpt">
+            {{ excerpt }}
+        </div>
+    </div>
+</article> <!-- end article -->

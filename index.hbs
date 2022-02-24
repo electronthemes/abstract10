@@ -1,0 +1,22 @@
+{{!< default }}
+
+<!-- masonry
+================================================== -->
+<section id="bricks">
+    <div class="row masonry">
+        <!-- brick-wrapper -->
+        <div class="bricks-wrapper">
+            <div class="grid-sizer"></div>
+            {{#if @custom.show_featured_posts}}
+            {{> "featured-slider"}}
+            {{/if}}
+            
+            {{#foreach posts}}
+               {{> "post-card" }}
+            {{/foreach}}
+        </div> <!-- end brick-wrapper -->
+    </div> <!-- end row -->
+    <div class="row">
+        {{> "theme-pagination"}}
+    </div>
+</section> <!-- end bricks -->
