@@ -2882,6 +2882,7 @@ footer ul li {
 .subscribe-form .form-control::placeholder {
     color: #000;
 }
+
 .message-text {
     max-width: 500px;
     margin: auto;

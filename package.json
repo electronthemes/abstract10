@@ -1,10 +1,9 @@
 {
     "name": "abstract",
     "description": "This is a cool and minimal ghost theme for blogging !!! 🚀",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
+        "ghost": ">=5.0.0"
     },
     "license": "MIT",
     "author": {
@@ -25,11 +24,14 @@
     ],
     "config": {
         "posts_per_page": 10,
-        "card_assets": true,
+        "image_sizes": {},
+        "card_assets": {
+            "exclude": ["bookmark", "gallery"]
+        },
         "custom": {
             "site_footer": {
                 "type": "text",
-                "default": "bounty. All copyright reserved by Electronthemes & Published with Ghost."
+                "default": "Abstract. All copyright reserved by Electronthemes & Published with Ghost."
             },
             "about_site_footer": {
                 "type": "text",
