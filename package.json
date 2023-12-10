@@ -1,7 +1,7 @@
 {
     "name": "abstract",
     "description": "This is a cool and minimal ghost theme for blogging !!! 🚀",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "engines": {
         "ghost": ">=5.0.0"
     },
@@ -47,12 +47,12 @@
                 "default": true,
                 "group": "post"
             },
-            "show_navigation-section": {
+            "show_navigation_section": {
                 "type": "boolean",
                 "default": true,
                 "group": "post"
             },
-            "show_comment-box": {
+            "show_comment_box": {
                 "type": "boolean",
                 "default": true,
                 "group": "post"

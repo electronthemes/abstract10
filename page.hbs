@@ -1,0 +1,38 @@
+{{!< default }}
+
+{{#post}}
+<!-- content
+================================================== -->
+<section id="content-wrap" class="blog-single">
+	<div class="row">
+		<div class="col-twelve">
+			<article class="format-standard">
+                {{#match @page.show_title_and_feature_image}}
+				{{#if feature_image}}
+					<div class="content-media">
+						<div class="post-thumb">
+							<img src="{{ feature_image }}">
+						</div>
+					</div>
+				{{/if}}
+                {{/match}}
+				<div class="primary-content blog-full-content">
+                    {{#match @page.show_title_and_feature_image}}
+					<h1 class="page-title">{{ title }}</h1>
+                    {{/match}}
+					{{content}}
+				</div> <!-- end entry-primary -->
+			</article>
+		</div> <!-- end col-twelve -->
+	</div> <!-- end row -->
+
+</section> <!-- end content -->
+{{/post}}
+{{#contentFor "page-footer-style"}}
+	<style>
+		footer{
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			margin-top: 60px;
+		}
+	</style>
+{{/contentFor}}
